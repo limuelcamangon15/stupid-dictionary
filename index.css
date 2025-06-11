@@ -1,0 +1,153 @@
+body{
+    background-color: #000000;
+    margin: 0;
+
+    transition: all 0.5s ease;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    margin-bottom: 10px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.stupidIcon{
+    border-radius: 10px;
+}
+
+section{
+    display: flex;
+    gap: 7px;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.input{
+    width: 300px;
+    height: 25px;
+    border-radius: 7px;
+    border: none;
+    padding: 0 5px;
+
+    transition: all 0.5s ease;
+}
+
+.searchButton{
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+
+    transition: all 0.5s ease;
+}
+
+.resultDiv{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 1;
+
+    transition: all 0.5s ease;
+}
+
+.resultDivFade{
+    opacity: 0;
+}
+
+.themeButtonLightMode{
+    color: rgba(255, 255, 255, 0.521);
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 5px;
+
+    width: 30px;
+    transition: all 0.5s ease;
+}
+
+
+.themeButtonLightMode:hover{
+    color: white;
+}
+
+.themeButtonDarkMode{
+    color: rgba(255, 255, 255, 0.521);
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 5px;
+
+    width: 30px;
+    transition: all 0.5s ease;
+}
+
+.themeButtonDarkMode:hover{
+    color: black;
+}
+
+.activeTheme{
+    color: rgb(255, 255, 255);
+    background-color: black;
+    width: 60px;
+}
+
+.buttonContainer{
+    margin: 20px 20px 20px auto; 
+    background-color: #4d4949;
+    border-radius: 20px;
+    border: 2px solid gray;
+
+    display: flex;
+
+}
+
+footer{
+    position: absolute; 
+    bottom: 0;
+    margin: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.myLink{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+
+.myLinkSpan{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gmailLink, .igLink, .fbLink{
+    color: white;
+}
