@@ -17,8 +17,47 @@ const gmailLink = document.getElementById('gmailLink');
 let dark = false;
 
 
+const errorModal = (title, text, icon) => {
+    let iconColorStyle;
+    let popupStyle;
+    let confirmButtonStyle;
+
+    if(dark){
+        iconColorStyle = 'white';
+        popupStyle = 'modalContainerLightMode';
+        confirmButtonStyle = 'modalConfirmButtonLightMode';
+    }
+    else{
+        iconColorStyle = 'black';
+        popupStyle = 'modalContainerDarkMode';
+        confirmButtonStyle = 'modalConfirmButtonDarkMode';
+    }
+
+    Swal.fire({
+        title: title,
+        text: text,
+        icon: icon,
+        confirmButtonText: 'OK',
+        customClass: {
+            confirmButton: confirmButtonStyle,
+            popup: popupStyle
+        },
+        iconColor: iconColorStyle
+    });
+}
+
 const fetchData = async () => {
-    let word =  input.value.trim();
+    let title = 'Empty Input Field';
+    let text = 'Enter a word first before searching';
+    let icon = 'error';
+
+    let word = input.value.trim();
+
+    if(word === ''){ 
+        errorModal(title, text, icon); 
+        return; 
+    }
+
     try{
         const respond = await fetch(`https://api.urbandictionary.com/v0/define?term=${word}`);
 
@@ -43,7 +82,11 @@ const fetchData = async () => {
         }, 400);
     }
     catch(error){
-        console.error(error);
+        title = 'Word not found :(';
+        text = 'Oooppss, the word is not yet added to our brain.';
+        icon = 'warning';
+
+        errorModal(title, text, icon);
     }
 }
 
