@@ -85,7 +85,7 @@ section{
 }
 
 
-.themeButtonLightMode:hover{
+.themeButtonLightMode:hover, .themeButtonDarkMode:hover{
     color: white;
 }
 
@@ -100,10 +100,6 @@ section{
 
     width: 30px;
     transition: all 0.5s ease;
-}
-
-.themeButtonDarkMode:hover{
-    color: black;
 }
 
 .activeTheme{
@@ -150,4 +146,28 @@ footer{
 
 .gmailLink, .igLink, .fbLink{
     color: white;
+}
+
+.modalConfirmButtonLightMode{
+    background-color: white !important;
+    border-radius: 10px !important;
+    color: black !important;
+}
+
+.modalConfirmButtonDarkMode{
+    background-color: black !important;
+    border-radius: 10px !important;
+    color: white !important;
+}
+
+.modalContainerLightMode{
+    border-radius: 20px !important;
+    background-color: black !important; 
+    color: white !important;
+}
+
+.modalContainerDarkMode{
+    border-radius: 20px !important;
+    background-color: white !important; 
+    color: black !important;
 }
